@@ -1,1 +1,1 @@
-FROM halo:2.20.0
+FROM halohub/halo:2.20.0
