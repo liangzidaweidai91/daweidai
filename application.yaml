@@ -1,9 +1,9 @@
 spring:
   datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/halodb?useSSL=true&serverTimezone=Asia/Shanghai
-    username: 2Ur133XyPKnjGjt.root
-    password: "0SZ0H1smoK0P1xoJ"
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://ep-young-dawn-h3xh8v8-pooler-c-4.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+    username: neondb_owner
+    password: "npg_6dfBUCz3kbXe"
 halo:
   work-dir: /root/.halo2
-  external-url: ${HALO_EXTERNAL_URL:}
+  external-url: https://shturl.cc/ej4HukCT
