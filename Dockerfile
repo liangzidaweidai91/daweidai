@@ -1,7 +1,6 @@
-FROM openjdk:17-jdk-slim
+FROM openjdk:21-jdk-slim
 WORKDIR /app
 
-# 构建的时候自动下载 halo‑2.26.0.jar，重命名 halo.jar
 RUN wget https://dl.halo.run/release/halo-2.26.0.jar -O halo.jar
 
 COPY application.yaml /root/.halo2/application.yaml
