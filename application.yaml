@@ -1,11 +1,9 @@
 spring:
-  r2dbc:
-    url: r2dbc:pool:postgresql://ep-young-dawn-h3xh8v8.ap-southeast-1.aws.neon.tech/neondb?sslMode=REQUIRE
-    username: neondb_owner
-    password: "npg_6dfUCz3kbxe"
-  sql:
-    init:
-      platform: postgresql
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://gateway01ap-southeast-1-prod.aws.tidbcloud.com:4000/halodb?useSSL=true&serverTimezone=Asia/Shanghai
+    username: "2Ur133XyPKnjGjt.root"
+    password: "HMv2wqq9lQ8RUc5M"
 halo:
   work-dir: /root/.halo2
-  
+
