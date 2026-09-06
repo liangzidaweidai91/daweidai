@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/halodb?useSSL=true&serverTimezone=Asia/Shanghai
+    username: 2Ur133XyPKnjGjt.root
+    password: "0SZ0H1smoK0P1xoJ"
+halo:
+  work-dir: /root/.halo2
+  external-url: ${HALO_EXTERNAL_URL:}
