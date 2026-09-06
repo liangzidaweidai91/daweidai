@@ -1,6 +1,6 @@
 spring:
   r2dbc:
-    url: r2dbc:pool:postgresql://ep-young-dawn-h3xh8v8-pooler-c-4.ap-southeast-1.aws.neon.tech/neondb?sslMode=REQUIRE
+    url: r2dbc:pool:postgresql://ep-young-dawn-h3xh8v8.ap-southeast-1.aws.neon.tech/neondb?sslMode=REQUIRE
     username: neondb_owner
     password: "npg_6dfUCz3kbxe"
   sql:
