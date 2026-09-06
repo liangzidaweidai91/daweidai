@@ -8,4 +8,4 @@ spring:
       platform: postgresql
 halo:
   work-dir: /root/.halo2
-  external-url: https://shturl.cc/ej4HukCT
+
