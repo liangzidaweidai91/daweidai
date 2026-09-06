@@ -1,6 +1,6 @@
 FROM halohub/halo:2.20.0
 
-ENV JAVA_OPTS="-Xmx128m -Xms128m -XX:MaxMetaspaceSize=64m -XX:MaxDirectMemorySize=32m -XX:+UseSerialGC -XX:+UseStringDeduplication -XX:-UsePerfData"
+ENV JAVA_OPTS="-Xmx224m -Xms224m -XX:MaxMetaspaceSize=80m -XX:MaxDirectMemorySize=32m -XX:+UseSerialGC -XX:+UseStringDeduplication -XX:-UsePerfData"
 ENV TZ=Asia/Shanghai
 
 CMD [ \
