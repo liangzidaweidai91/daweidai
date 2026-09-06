@@ -1,9 +1,11 @@
 spring:
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://ep-young-dawn-h3xh8v8-pooler-c-4.ap-southeast-1.aws.neon.tech/neondb?sslmode=require
+  r2dbc:
+    url: r2dbc:pool:postgresql://ep-young-dawn-h3xh8v8-pooler-c-4.ap-southeast-1.aws.neon.tech/neondb?sslMode=REQUIRE
     username: neondb_owner
-    password: "npg_6dfBUCz3kbXe"
+    password: "npg_6dfUCz3kbxe"
+  sql:
+    init:
+      platform: postgresql
 halo:
   work-dir: /root/.halo2
   external-url: https://shturl.cc/ej4HukCT
