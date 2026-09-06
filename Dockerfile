@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 openjdk:21-jdk-slim
+FROM eclipse-temurin:21-jdk
 WORKDIR /app
 
 RUN wget https://dl.halo.run/release/halo-2.26.0.jar -O halo.jar
