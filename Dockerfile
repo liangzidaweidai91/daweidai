@@ -1,10 +1,10 @@
-server:
-  port: 8090
+FROM eclipse-temurin:17-jre-alpine
 
-spring:
-  r2dbc:
-    url: r2dbc:pool:postgresql://ep-young-dawn-b3xh0sv8-pooler.c-4.ap-southeast-1.aws.neon.tech:5432/neondb?sslmode=require
-    username: neondb_owner
+ENV SPRING_R2DBC_PASSWORD=npg_hyCUG90o1jLn
+ENV JAVA_OPTS="-Xms60m -Xmx160m -XX:+UseSerialGC"
 
-halo:
-  work-dir: /root/.halo2
+WORKDIR /app
+COPY halo.jar app.jar
+
+EXPOSE 8090
+ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar app.jar"]
