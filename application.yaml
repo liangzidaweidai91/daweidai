@@ -2,7 +2,6 @@ spring:
   r2dbc:
     url: r2dbc:pool:postgresql://ep-young-dawn-b3xh0sv8-pooler.c-4.ap-southeast-1.aws.neon.tech:5432/neondb?sslmode=require
     username: neondb_owner
-    password: "npg_R8WtwC5pFn1Q"
+    password: "npg_hyCUG90o1jLn"
 halo:
   work-dir: /root/.halo2
-  external-url: https://shturl.cc/ej4HukCT
