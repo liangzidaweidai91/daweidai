@@ -6,7 +6,7 @@ RUN wget https://github.com/halo-dev/halo/releases/download/v2.20.0/halo-2.20.0.
 
 COPY application.yaml /application/config/application.yaml
 
-ENV JAVA_TOOL_OPTIONS="-Xms128m -Xmx200m"
+ENV JAVA_TOOL_OPTIONS="-Xms100m -Xmx160m"
 
 EXPOSE 8090
 
