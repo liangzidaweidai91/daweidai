@@ -1,12 +1,8 @@
 spring:
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://gateway01ap-southeast-1-prod.aws.tidbcloud.com:4000/halodb?useSSL=true&serverTimezone=Asia/Shanghai&useServerPrepStmts=false&cachePrepStmts=false&dontTrackOpenResources=true&metadataCacheSize=5
-    username: "2Ur133XyPKnjGjt.root"
-    password: "HMv2wqq9lQ8RUc5M"
-  hikari:
-    maximum-pool-size: 2
-    minimum-idle: 1
+  r2dbc:
+    url: r2dbc:pool:postgresql://ep-young-dawn-b3xh0sv8-pooler.c-4.ap-southeast-1.aws.neon.tech:5432/neondb?sslmode=require
+    username: neondb_owner
+    password: "npg_R8WtwC5pFn1Q"
 halo:
   work-dir: /root/.halo2
-
+  external-url: https://shturl.cc/ej4HukCT
