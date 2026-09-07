@@ -1,15 +1,10 @@
-FROM openjdk:17-jdk-slim
+server:
+  port: 8090
 
-WORKDIR /application
+spring:
+  r2dbc:
+    url: r2dbc:pool:postgresql://ep-young-dawn-b3xh0sv8-pooler.c-4.ap-southeast-1.aws.neon.tech:5432/neondb?sslmode=require
+    username: neondb_owner
 
-RUN wget https://github.com/halo-dev/halo/releases/download/v2.20.0/halo-2.20.0.jar -O halo.jar
-
-COPY application.yaml /application/config/application.yaml
-
-ENV JAVA_TOOL_OPTIONS="-Xms100m -Xmx160m"
-# 打印完整Spring日志输出
-ENV LOGGING_LEVEL_ROOT=INFO
-
-EXPOSE 8090
-
-CMD ["java","-jar","/application/halo.jar"]
+halo:
+  work-dir: /root/.halo2
