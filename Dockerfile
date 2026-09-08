@@ -5,14 +5,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends wget && rm -rf 
 ENV JAVA_OPTS="-Xms60m -Xmx140m -XX:+UseSerialGC -XX:MaxMetaspaceSize=128m"
 ENV SPRING_PROFILES_ACTIVE=prod
 
-ENV SPRING_R2DBC_URL=r2dbc:mysql://gateway01ap‑southeast‑1‑prod.aws.tidbcloud.com:4000/halodb?ssl‑mode=REQUIRED
+# 重点：这里全部是普通英文减号，不要复制旧的带特殊‑的版本
+ENV SPRING_R2DBC_URL=r2dbc:mysql://gateway01ap-southeast-1-prod.aws.tidbcloud.com:4000/halodb?ssl-mode=REQUIRED
 ENV SPRING_R2DBC_USERNAME=2Ur133XyPKnjGjtroot
 ENV SPRING_R2DBC_PASSWORD=kNCZ21cx0S7MShjp
-ENV HALO_EXTERNAL_URL=http://halo‑9bb51.containers.snapdeploy.app/
+ENV HALO_EXTERNAL_URL=http://halo-9bb51.containers.snapdeploy.app/
 
 WORKDIR /app
 
-# 使用 GitHub 发布页下载 2.26.0
 RUN wget https://github.com/halo-dev/halo/releases/download/v2.26.0/halo-2.26.0.jar -O app.jar
 
 EXPOSE 8090
