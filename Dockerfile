@@ -9,6 +9,9 @@ ENV JAVA_OPTS="-Xms60m -Xmx140m -XX:+UseSerialGC -XX:MaxMetaspaceSize=80m"
 
 WORKDIR /app
 
+# 关键！把仓库根目录的yaml复制进镜像/app文件夹
+COPY application.yaml /app/application.yaml
+
 RUN wget https://dl.halo.run/release/halo-2.26.0.jar -O app.jar
 
 EXPOSE 8090
