@@ -5,8 +5,8 @@ RUN apt-get update && apt-get install -y --no-install-recommends wget && rm -rf 
 ENV JAVA_OPTS="-Xms60m -Xmx140m -XX:+UseSerialGC -XX:MaxMetaspaceSize=128m"
 ENV SPRING_PROFILES_ACTIVE=prod
 
-# 重点：这里全部是普通英文减号，不要复制旧的带特殊‑的版本
-ENV SPRING_R2DBC_URL=r2dbc:mysql://gateway01ap-southeast-1-prod.aws.tidbcloud.com:4000/halodb?ssl-mode=REQUIRED
+# gateway01. 这里必须带小数点！！
+ENV SPRING_R2DBC_URL=r2dbc:mysql://gateway01.ap-southeast-1-prod.aws.tidbcloud.com:4000/halodb?ssl-mode=REQUIRED
 ENV SPRING_R2DBC_USERNAME=2Ur133XyPKnjGjtroot
 ENV SPRING_R2DBC_PASSWORD=kNCZ21cx0S7MShjp
 ENV HALO_EXTERNAL_URL=http://halo-9bb51.containers.snapdeploy.app/
