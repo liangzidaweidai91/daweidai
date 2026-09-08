@@ -1,0 +1,9 @@
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://ep-young-dawn-b3xh0sv8.c-4.ap-southeast-1.aws.neon.tech:5432/neondb?sslmode=require
+    username: neondb_owner
+    password: npg_VnjDsmIH1Sq6
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+
