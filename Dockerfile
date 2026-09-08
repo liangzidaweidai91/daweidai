@@ -12,7 +12,8 @@ ENV HALO_EXTERNAL_URL=http://halo‑9bb51.containers.snapdeploy.app/
 
 WORKDIR /app
 
-RUN wget https://dl.halo.run/release/halo‑2.26.0.jar -O app.jar
+# 使用 GitHub 发布页下载 2.26.0
+RUN wget https://github.com/halo-dev/halo/releases/download/v2.26.0/halo-2.26.0.jar -O app.jar
 
 EXPOSE 8090
 ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar app.jar"]
