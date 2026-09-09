@@ -1,9 +1,9 @@
-# 增加--platform=linux/amd64 解决exec format error
-FROM --platform=linux/amd64 openjdk:21-jre-slim
+FROM --platform=linux/amd64 eclipse-temurin:21-jre-alpine
 
 WORKDIR /app
 
-RUN wget https://dl.halo.run/release/halo-2.26.0.jar -O halo.jar
+RUN apk add --no-cache wget && \
+    wget https://dl.halo.run/release/halo-2.26.0.jar -O halo.jar
 
 ENV JAVA_TOOL_OPTIONS="-Xmx128m -Xms64m"
 
